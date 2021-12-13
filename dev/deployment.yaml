@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: myappoc
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: myappoc
   replicas: 2
   template:
     metadata:
       labels:
-        app: myapp
+        app: myappoc
     spec:
       containers:
-      - name: myapp
+      - name: myappoc
         image: docker.io/jptabja/superbankassistant:latest
         ports:
         - containerPort: 8080
