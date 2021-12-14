@@ -16,4 +16,4 @@ spec:
       - name: flightswebapp
         image: docker.io/jptabja/flightswebapp:v1
         ports:
-        - containerPort: 8080
+        - containerPort: 80
