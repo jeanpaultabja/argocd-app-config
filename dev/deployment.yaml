@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flightswebapp
+ name: flightswebapp
+ labels:
+    app: flightswebapp
 spec:
-  selector:
+ replicas: 2
+ selector:
     matchLabels:
       app: flightswebapp
-  replicas: 2
-  template:
+ template:
     metadata:
-      labels:
+       labels:
         app: flightswebapp
     spec:
       containers:
-      - name: flightswebapp
+      - name: flightswebappcontainer
         image: docker.io/jptabja/flightswebapp:v1
         ports:
-        - containerPort: 8080
+        - containerPort: 80

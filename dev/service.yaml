@@ -1,11 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flightswebapp-service
+ name: flightswebapp
 spec:
-  selector:
-    app: flightswebapp
-  ports:
-  - port: 8080
-    protocol: TCP
-    nodePort: 32089
+ type: NodePort
+ selector:
+   app: flightswebapp
+ ports:
+   - name: client
+     protocol: TCP
+     port: 80
+     nodePort: 32089
