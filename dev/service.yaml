@@ -9,5 +9,7 @@ spec:
  ports:
    - name: client
      protocol: TCP
-     port: 8080
-     targetPort: 32089
+     port: 80
+     nodePort: 32089
+selector:
+  app: flightswebapp
