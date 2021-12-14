@@ -10,4 +10,4 @@ spec:
    - name: client
      protocol: TCP
      port: 80
-     nodePort: 32089
+     targetPort: 32089
