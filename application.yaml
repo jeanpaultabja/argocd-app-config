@@ -12,11 +12,11 @@ spec:
     path: dev
   destination: 
     server: https://kubernetes.default.svc
-    namespace: flightswebappns
+    namespace: default
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+    - CreateNamespace=false
 
     automated:
       selfHeal: true
